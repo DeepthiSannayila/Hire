@@ -25,7 +25,15 @@ connectDB().then(() => createAdmin()).catch((error) => {
   console.error("Failed to initialize admin seed:", error.message || error);
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://ecshire.netlify.app",
+      "http://localhost:3000"
+    ],
+    credentials: true
+  })
+);
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
