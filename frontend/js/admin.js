@@ -10,13 +10,13 @@ if (!token || role !== "admin") {
 async function loadAdminData() {
   try {
     const [dashboardResponse, resultsResponse, violationsResponse] = await Promise.all([
-      fetch("http://localhost:5080/api/admin/dashboard", {
+      fetch("http://hire-3uxn.onrender.com/api/admin/dashboard", {
         headers: { Authorization: "Bearer " + token }
       }),
-      fetch("http://localhost:5080/api/admin/results", {
+      fetch("http://hire-3uxn.onrender.com/api/admin/results", {
         headers: { Authorization: "Bearer " + token }
       }),
-      fetch("http://localhost:5080/api/admin/violations", {
+      fetch("http://hire-3uxn.onrender.com/api/admin/violations", {
         headers: { Authorization: "Bearer " + token }
       })
     ]);
