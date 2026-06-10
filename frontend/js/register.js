@@ -81,7 +81,7 @@ showStatus("Creating your account…", false);
 try {
   const response =
   await fetch(
-  "http://localhost:5080/api/auth/register",
+  "http://hire-3uxn.onrender.com/api/auth/register",
   {
   method:"POST",
 
